@@ -18,6 +18,8 @@ typedef struct	s_pushswap
 	int temp_ind;
 	int ordre;
 	int	size_temp;
+	int	big_num;
+	int	big_bits;
 }				t_pushswap;
 
 void ft_simplify_int(t_pushswap *p);

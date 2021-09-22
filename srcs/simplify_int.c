@@ -6,7 +6,7 @@
 /*   By: luffab <luffab@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 16:41:31 by luffab            #+#    #+#             */
-/*   Updated: 2021/09/22 21:29:24 by luffab           ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 00:10:38 by luffab           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,6 @@ void ft_simplify_int(t_pushswap *p)
 		ft_search_min(p);
 		i++;
 	}
+	free(p->temp_pile_a);
+	free(p->temp);
 }
