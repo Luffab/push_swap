@@ -6,7 +6,7 @@
 /*   By: luffab <luffab@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 00:10:55 by luffab            #+#    #+#             */
-/*   Updated: 2021/09/23 00:24:28 by luffab           ###   ########lyon.fr   */
+/*   Updated: 2021/09/24 02:26:40 by luffab           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void ft_radix_sort(t_pushswap *p)
 	int num;
 
 	i = 0;
-	p->pile_b = (int*)malloc(sizeof(int) * p->a_size - 1);
+	ft_get_info(p);
 	while (i < p->big_bits)
 	{
 		j = 0;
@@ -35,12 +35,19 @@ void ft_radix_sort(t_pushswap *p)
 		{
 			num = p->pile_a[0];
 			if ((num >> i) & 1 == 1)
-				//ra();
+				ft_ra(p);
 			else
+			{
+				p->nb_in_pb++;
 				//pb();
+			}
 			j++;
 		}
 		while (p->pile_b[0])
+		{
+			p->nb_in_pb--;
 			//pa();
+		}
+		i++;
 	}
 }

@@ -1,8 +1,9 @@
 NAME = push_swap
 
 SRCS =	srcs/main.c \
-		srcs/simplify_int.c
-		
+		srcs/simplify_int.c \
+		srcs/tri.c
+
 FLAGS = -Wall -Wextra -Werror
 
 HEADER_FILE = ./include

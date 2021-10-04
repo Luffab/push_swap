@@ -6,7 +6,7 @@
 /*   By: luffab <luffab@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 16:04:58 by luffab            #+#    #+#             */
-/*   Updated: 2021/09/23 00:17:10 by luffab           ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 18:54:48 by luffab           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,13 @@ int main(int ac, char **av)
 			p->a_size = ac - 1;
 			ft_putnumber(ac, av, p);
 			ft_simplify_int(p);
+			ft_ra(p);
+			int i = 0;
+			while (i < p->a_size)
+			{
+				printf("%d\n", p->pile_a[i]);
+				i++;
+			}
 		}
 	}
 }

@@ -20,8 +20,10 @@ typedef struct	s_pushswap
 	int	size_temp;
 	int	big_num;
 	int	big_bits;
+	int nb_in_pb;
 }				t_pushswap;
 
 void ft_simplify_int(t_pushswap *p);
+void ft_ra(t_pushswap *p);
 
 #endif

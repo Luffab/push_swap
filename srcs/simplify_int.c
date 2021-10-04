@@ -6,7 +6,7 @@
 /*   By: luffab <luffab@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 16:41:31 by luffab            #+#    #+#             */
-/*   Updated: 2021/09/23 00:10:38 by luffab           ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 19:05:35 by luffab           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void ft_simplify_int(t_pushswap *p)
 	p->temp_ind = 0;
 	p->temp = (int*)malloc(sizeof(int) * (p->a_size));
 	p->pile_a = (int*)malloc(sizeof(int) * (p->a_size));
+	p->pile_b = (int*)malloc(sizeof(int) * p->a_size);
 	p->size_temp = 0;
 	while (i < p->a_size)
 	{
