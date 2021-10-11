@@ -2,7 +2,13 @@ NAME = push_swap
 
 SRCS =	srcs/main.c \
 		srcs/simplify_int.c \
-		srcs/tri.c
+		srcs/tri.c \
+		srcs/tri2_3.c \
+		srcs/tri4.c \
+		srcs/tri5.c \
+		srcs/utils.c \
+		srcs/utils2.c \
+		srcs/algo.c
 
 FLAGS = -Wall -Wextra -Werror
 

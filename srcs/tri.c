@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   tri.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luffab <luffab@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: fatilly <fatilly@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 18:43:12 by luffab            #+#    #+#             */
-/*   Updated: 2021/09/24 03:02:17 by luffab           ###   ########lyon.fr   */
+/*   Updated: 2021/10/11 16:25:03 by fatilly          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_ra(t_pushswap *p)
+void	ft_ra(t_pushswap *p)
 {
-	int i;
-	int temp;
-	int last_temp;
+	int	i;
+	int	temp;
+	int	last_temp;
 
 	i = 1;
 	temp = 0;
@@ -30,11 +30,51 @@ void ft_ra(t_pushswap *p)
 	p->pile_a[i - 1] = last_temp;
 }
 
-void ft_pb(t_pushswap *p, int j)
+void	ft_pb(t_pushswap *p, int temp)
 {
-	p->pile_b[p->nb_in_pb] = p->pile_a[0];
-	p->pile_a[0] = -1;
+	p->pile_b[p->nb_in_pb] = p->pile_a[temp];
+	p->pile_a[temp] = -1;
 }
 
+void	ft_temp_equal_pa(t_pushswap *p)
+{
+	int	i;
 
+	i = 0;
+	while (i < p->a_size)
+	{
+		p->pile_a[i] = p->temp_pile_a[i];
+		i++;
+	}
+}
 
+void	ft_push_a_in_temp(t_pushswap *p)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	p->temp_pile_a = (int *)malloc(sizeof(int) * p->a_size);
+	while (i <= p->nb_in_pb)
+	{
+		p->temp_pile_a[i] = -1;
+		i++;
+	}
+	while (j < p->a_size)
+	{
+		if (p->pile_a[j] != -1)
+		{
+			p->temp_pile_a[i] = p->pile_a[j];
+			i++;
+		}
+		j++;
+	}
+	ft_temp_equal_pa(p);
+	free(p->temp_pile_a);
+}
+
+void	ft_pa(t_pushswap *p)
+{
+	p->pile_a[p->nb_in_pb] = p->pile_b[p->nb_in_pb];
+}

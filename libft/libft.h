@@ -1,15 +1,15 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   libft.h                                          .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: fatilly <fatilly@student.le-101.fr>        +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/10 12:09:09 by fatilly      #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/11 20:11:47 by fatilly     ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fatilly <fatilly@student.42lyon.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/10 12:09:09 by fatilly           #+#    #+#             */
+/*   Updated: 2021/10/11 15:26:29 by fatilly          ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -57,7 +57,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlcpy(char *dest, char *src, size_t n);
 size_t				ft_strlcat(char *dst, char *src, size_t size);
 int                 ft_strnstr(const char *s1, const char *s2, size_t n);
-int					ft_atoi(const char *nptr);
+long				ft_atoi(const char *nptr);
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char *s1, char *set);
